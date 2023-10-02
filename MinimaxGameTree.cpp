@@ -162,7 +162,7 @@ MinimaxGameTree::MinimaxGameTree(const string& filename) {
 
 int MinimaxGameTree::executeMinimax(bool isMaxPlayer, int range, bool verbose, bool useAB) {
     string root = findRoot();
-    DFS(root);
+    DFS(root); //verified if the tree is complete
     return minimax(root, isMaxPlayer, -range, range, verbose, useAB);
 }
 
